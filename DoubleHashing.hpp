@@ -4,7 +4,7 @@
 template <typename T>
 class DoubleHashing : public HashTableClosed<T> {
 public:
-    explicit DoubleHashing(int size = 101)
+    DoubleHashing(int size = 101)
         : HashTableClosed<T>(size) {}
 
     int hash2(const T& key) const {
@@ -15,14 +15,4 @@ public:
         // TODO: Implement double hashing
         return 0;
     }
-
-    int insert(const T& key) override {
-        // TODO: 
-        return 0;
-    }
-
-    pair<bool, int> search(const T& key) const override {
-        // TODO: 
-        return {false, 0};
-    }
-};
+ };

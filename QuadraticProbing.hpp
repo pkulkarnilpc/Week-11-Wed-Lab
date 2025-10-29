@@ -12,13 +12,5 @@ public:
         return 0;
     }
 
-    int insert(const T& key) override {
-        // TODO: Implement quadratic probing
-        return 0;
-    }
-
-    pair<bool, int> search(const T& key) const override {
-        // TODO: Implement quadratic probing
-        return {false, 0};
-    }
+   
 };

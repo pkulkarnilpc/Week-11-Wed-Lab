@@ -41,7 +41,6 @@ int main() {
         for (int k : keys)
             totalInsertProbes += tables[t]->insert(k); // Students implement
 
-        cout << "Inserted " << N << " keys\n";
         cout << "Average probes (insert): " << fixed << setprecision(2)
              << static_cast<double>(totalInsertProbes) / N << "\n";
 

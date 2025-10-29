@@ -7,16 +7,18 @@ public:
     explicit QuadraticProbing(int size = 101)
         : HashTableClosed<T>(size) {}
 
-    // TODO: Implement quadratic probing
     int probeIndex(const T& key, int i) const override {
+        // TODO: Implement quadratic probing
         return 0;
     }
 
     int insert(const T& key) override {
+        // TODO: Implement quadratic probing
         return 0;
     }
 
     pair<bool, int> search(const T& key) const override {
+        // TODO: Implement quadratic probing
         return {false, 0};
     }
 };

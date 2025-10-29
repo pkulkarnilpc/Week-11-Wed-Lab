@@ -11,7 +11,7 @@ public:
 
     // TODO: Implement linear probing with skip
     int probeIndex(const T& key, int i) const override {
-        // Students should implement
+        // TO DO
         return 0;
     }
 

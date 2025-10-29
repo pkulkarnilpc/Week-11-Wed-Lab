@@ -11,16 +11,18 @@ public:
         return 7 - (static_cast<int>(key) % 7);
     }
 
-    // TODO: Implement double hashing
     int probeIndex(const T& key, int i) const override {
+        // TODO: Implement double hashing
         return 0;
     }
 
     int insert(const T& key) override {
+        // TODO: 
         return 0;
     }
 
     pair<bool, int> search(const T& key) const override {
+        // TODO: 
         return {false, 0};
     }
 };

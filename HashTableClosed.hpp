@@ -10,10 +10,11 @@ class HashTableClosed {
 protected:
     vector<T> table;
     vector<bool> occupied;
-    int M; // table size
-    int N; // number of elements
 
 public:
+    int M; // table size
+    int N; // number of elements
+    
     explicit HashTableClosed(int size = 101)
         : M(size), N(0) {
         table.resize(M);
@@ -22,14 +23,11 @@ public:
 
     virtual ~HashTableClosed() = default;
 
-    // Students implement: returns the index for the i-th probe
     virtual int probeIndex(const T& key, int i) const = 0;
 
-    // Students implement: insert key into table, return number of probes
-    virtual int insert(const T& key) = 0;
+    virtual int insert(const T& key);
 
-    // Students implement: search key, return {found, probes}
-    virtual pair<bool, int> search(const T& key) const = 0;
+    virtual pair<bool, int> search(const T& key) const;
 
     void display() const {
         cout << "Hash Table (size=" << M << ")\n";
@@ -41,7 +39,13 @@ public:
         }
     }
 
+    int hash1(const T& key) const
+    {
+        return static_cast<int>(key) % M;
+    }
+
     int size() const { return M; }
     int count() const { return N; }
     double loadFactor() const { return static_cast<double>(N)/M; }
 };
+#include "HashTableClosed.tpp"
